@@ -14,6 +14,10 @@ app.get("/api/test", (req, res) => {
   res.json("test");
 });
 
+app.get("/api/user", (req, res) => {
+  res.json([{ username: "zullum" }]);
+});
+
 app.use(express.static(path.join(__dirname, "./frontend/build")));
 
 app.get("*", function (_, res) {
@@ -31,5 +35,3 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server Running on port ${port}`));
 
 module.exports = app;
-
-// uncomment build from fronent gitignore file and run npm build inside frontend before pushing to git
