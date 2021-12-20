@@ -31,3 +31,5 @@ const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server Running on port ${port}`));
 
 module.exports = app;
+
+// uncomment build from fronent gitignore file and run npm build inside frontend before pushing to git
